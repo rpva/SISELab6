@@ -5,9 +5,7 @@ import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import java.io.File;
-import java.io.FileDescriptor;
 import java.io.UnsupportedEncodingException;
-import java.nio.file.FileSystem;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.*;
@@ -16,10 +14,10 @@ import java.util.Base64;
 import java.util.Scanner;
 
 
-public class AsymEncrypt {
+public class AsymEncryptPub {
     private Cipher cipher;
 
-    public AsymEncrypt() throws NoSuchAlgorithmException, NoSuchPaddingException {
+    public AsymEncryptPub() throws NoSuchAlgorithmException, NoSuchPaddingException {
         this.cipher = Cipher.getInstance("RSA");
     }
 
@@ -43,7 +41,7 @@ public class AsymEncrypt {
 
     public static void main(String[] args) throws Exception {
         //start the encryption framework
-        AsymEncrypt ac = new AsymEncrypt();
+        AsymEncryptPub ac = new AsymEncryptPub();
 
         // load the public key
         System.out.print("insert the path to the public keyfile (ex. 'keys\\user1PublicKey') :");
