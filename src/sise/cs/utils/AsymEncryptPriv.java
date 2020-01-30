@@ -44,7 +44,7 @@ public class AsymEncryptPriv {
         //start the encryption framework
         AsymEncryptPriv ac = new AsymEncryptPriv();
 
-        // load the public key
+        // load the private key
         System.out.print("insert the path to the private keyfile (ex. 'keys\\user1PrivateKey') :");
         Scanner path = new Scanner(System.in);
         String keyfile = path.nextLine();

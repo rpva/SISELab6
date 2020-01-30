@@ -41,15 +41,14 @@ public class AsymDecryptPriv {
 
     public static void main(String[] args) throws Exception {
         //start the encryption framework
-        AsymDecryptPriv ac = new AsymDecryptPriv();
+        AsymDecryptPriv ad = new AsymDecryptPriv();
 
         //load private key file
-        // load the public key
         System.out.print("insert the path to the private keyfile (ex. 'keys\\user1PrivateKey'): ");
         Scanner path = new Scanner(System.in);
         String keyfile = path.nextLine();
 
-        PrivateKey privateKey = ac.getPrivate(Paths.get("").toAbsolutePath() + System.getProperty("file.separator") + keyfile);
+        PrivateKey privateKey = ad.getPrivate(Paths.get("").toAbsolutePath() + System.getProperty("file.separator") + keyfile);
 
         //read encrypted message from the command line
         System.out.print("Encrypted Message: ");
@@ -57,7 +56,7 @@ public class AsymDecryptPriv {
         String encrypted_msg = in.nextLine();
 
         //decrypt message
-        String decrypted_msg = ac.decryptText(encrypted_msg, privateKey);
+        String decrypted_msg = ad.decryptText(encrypted_msg, privateKey);
 
         System.out.println("\nEncrypted Message: " + encrypted_msg +
                 "\nDecrypted Message: " + decrypted_msg);

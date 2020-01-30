@@ -44,7 +44,7 @@ public class AsymEncryptPub {
         AsymEncryptPub ac = new AsymEncryptPub();
 
         // load the public key
-        System.out.print("insert the path to the public keyfile (ex. 'keys\\user1PublicKey') :");
+        System.out.print("insert the path to the public keyfile (ex. 'keys\\user1PublicKey'): ");
         Scanner path = new Scanner(System.in);
         String keyfile = path.nextLine();
         PublicKey publicKey = ac.getPublic(Paths.get("").toAbsolutePath() + System.getProperty("file.separator") + keyfile);
